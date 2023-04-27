@@ -1,3 +1,3 @@
-import Button from './Button.vue'
+import TButton from './TButton.vue'
 
-export default Button 
+export default TButton 

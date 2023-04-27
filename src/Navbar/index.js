@@ -1,3 +1,3 @@
-import Navbar from './Navbar.vue'
+import TNavbar from './TNavbar.vue'
 
-export default Navbar
+export default TNavbar

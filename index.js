@@ -1,11 +1,11 @@
-import Button from './src/Button'
-import Card from './src/Card'
-import Footer from './src/Footer'
-import Navbar from './src/Navbar'
+import UButton from './src/Button'
+import UCard from './src/Card'
+import UFooter from './src/Footer'
+import UNavbar from './src/Navbar'
 
 export {
-    Button,
-    Card,
-    Footer,
-    Navbar
+    UButton,
+    UCard,
+    UFooter,
+    UNavbar
 }

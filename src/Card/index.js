@@ -1,3 +1,3 @@
-import Card from './Card.vue'
+import TCard from './TCard.vue'
 
-export default Card 
+export default TCard 

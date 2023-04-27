@@ -1,6 +1,6 @@
 {
   "name": "unostrap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "front-end UI framework width UNOCSS",
   "main": "index.js",
   "repository": {
@@ -15,6 +15,14 @@
     "email": "maghami.a1987@gmail.com",
     "name": "Amir Maghami",
     "url": "http://amirmaghami.ir/"
+  },
+    "dependencies": {
+    "console-log-advanced": "^1.2.4",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "sass-loader": "^13.2.2",
+    "sass": "^1.62.1"
   },
   "type": "module",
   "license": "ISC",
