@@ -1,37 +1,35 @@
 <template>
-  <button
-    :class="classComputed"
-    class=":uno: bg-blue-500 hover:bg-blue-800 focus:bg-blue-600 text-blue-50 rounded"
-  >
-    <slot></slot>
-  </button>
+  <div class="uno: bg-black opacity-70 fixed inset-0 w-screen h-screen m-auto z-49">
+
+  </div>
+      <div class=":uno: bg-white z-50 fixed w-180 h-120 inset-0 rounded m-auto">
+      <div class=":uno: p-4">
+        <div class="">{{ props.title }}</div>
+      </div>
+      <div class=":uno: p-4">
+        {{ props.body }}
+      </div>
+      <div class=":uno: p-4">
+        {{ props.footer }}
+      </div>
+    </div>
 </template>
 
 <script setup>
-import { defineProps, onMounted, watch, computed } from "vue";
+import { defineProps, onMounted, watch } from "vue";
 import { z } from "zod";
 import CLG from "console-log-advanced";
 const clg = new CLG({ isDevelopMode: true });
 
 const PropsSchema = z.object({
-  size: z.string(),
+  title: z.string(),
+  body: z.string(),
+  footer: z.string(),
 });
 const props = defineProps({
-  size: "",
-});
-const classComputed = computed(() => {
-  switch (props.size) {
-    case "xs":
-      return "px-2 py-1";
-    case "sm":
-      return "px-4 py-2";
-    case "base":
-      return "px-6 py-2";
-    case "lg":
-      return "px-8 py-2";
-    case "xl":
-      return "px-10 py-2";
-  }
+  title: "",
+  body: "",
+  footer: "",
 });
 const dataValidator = async () => {
   const { success, error } = await PropsSchema.safeParse(props);
@@ -39,7 +37,7 @@ const dataValidator = async () => {
     clg.logger({
       name: "zod issues",
       value: error.issues,
-      path: "Button.vue",
+      path: "Modal.vue",
       line: "35",
       commit: "comment",
       deactivate: false,

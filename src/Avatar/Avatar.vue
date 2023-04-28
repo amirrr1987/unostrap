@@ -1,45 +1,42 @@
 <template>
-  <button
-    :class="classComputed"
-    class=":uno: bg-blue-500 hover:bg-blue-800 focus:bg-blue-600 text-blue-50 rounded"
-  >
-    <slot></slot>
-  </button>
+<img :class="classComputed" class=":uno: rounded-full" :src="props.img" alt="Rounded avatar">
 </template>
 
 <script setup>
-import { defineProps, onMounted, watch, computed } from "vue";
+import { computed, defineProps, onMounted, watch } from "vue";
 import { z } from "zod";
 import CLG from "console-log-advanced";
 const clg = new CLG({ isDevelopMode: true });
 
 const PropsSchema = z.object({
-  size: z.string(),
+  img: z.string(),
+  size: z.string()
 });
 const props = defineProps({
-  size: "",
+  img: "",
+  size: ""
 });
 const classComputed = computed(() => {
-  switch (props.size) {
-    case "xs":
-      return "px-2 py-1";
-    case "sm":
-      return "px-4 py-2";
-    case "base":
-      return "px-6 py-2";
-    case "lg":
-      return "px-8 py-2";
-    case "xl":
-      return "px-10 py-2";
-  }
-});
+    switch (props.size) {
+        case 'xs':
+            return 'w-8 h-8'
+        case 'sm':
+            return 'w-10 h-10'
+        case 'base':
+            return 'w-12 h-12'
+        case 'lg':
+            return 'w-14 h-14'
+        case 'xl':
+            return 'w-16 h-16'
+    }
+})
 const dataValidator = async () => {
   const { success, error } = await PropsSchema.safeParse(props);
   if (!success) {
     clg.logger({
       name: "zod issues",
       value: error.issues,
-      path: "Button.vue",
+      path: "Avatar.vue",
       line: "35",
       commit: "comment",
       deactivate: false,
@@ -54,4 +51,6 @@ watch(props, () => {
 });
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+
+</style>
