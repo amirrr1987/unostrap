@@ -1,3 +1,3 @@
-import TFooter from './TFooter.vue'
+import Footer from './Footer.vue'
 
-export default TFooter 
+export default Footer 
