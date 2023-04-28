@@ -36,7 +36,7 @@ const props = defineProps({
 const dataValidator = async () => {
   const { success, error } = await PropsSchema.safeParse(props)
   if (!success) {
-    clg.logger({ name: "zod issues", value: error.issues, path: 'TCard.vue', line: '35', commit: "comment", deactivate: false })
+    clg.logger({ name: "zod issues", value: error.issues, path: 'TCard.vue' })
   } 
 }
 onMounted(() => {
