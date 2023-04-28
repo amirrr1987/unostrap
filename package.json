@@ -16,14 +16,12 @@
     "name": "Amir Maghami",
     "url": "http://amirmaghami.ir/"
   },
-    "dependencies": {
+  "dependencies": {
     "console-log-advanced": "^1.2.4",
+    "less": "^4.1.3",
     "zod": "^3.21.4"
   },
-  "devDependencies": {
-    "sass-loader": "^13.2.2",
-    "sass": "^1.62.1"
-  },
+  "devDependencies": {},
   "type": "module",
   "license": "ISC",
   "bugs": {
