@@ -1,6 +1,6 @@
 <template>
-  <figure>
-    <img :src="props.img" :title="props.title" :alt="props.title" />
+  <figure class="card">
+    <img class="card__img" :src="props.img" :title="props.title" :alt="props.title" />
     <figcaption>
       <h4>{{ props.title }}</h4>
       <p>{{ props.caption }}</p>
@@ -43,3 +43,13 @@ watch(props, () => {
 })
 
 </script>
+
+<style lang="less">
+.card{
+  background-color: red;
+  &__img{
+    width: 400px;
+    height: 300px;
+  }
+}
+</style>
