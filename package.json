@@ -1,6 +1,6 @@
 {
   "name": "unostrap",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "front-end UI framework width UNOCSS",
   "main": "index.js",
   "repository": {
@@ -19,7 +19,9 @@
   "dependencies": {
     "console-log-advanced": "^1.2.4",
     "less": "^4.1.3",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "@unocss/transformer-compile-class": "^0.51.8",
+    "unocss": "^0.51.8"
   },
   "devDependencies": {},
   "type": "module",
