@@ -1,13 +1,16 @@
 <template>
-  
-  <div class="flex justify-between">
-    <a href="#tab-1">tab1</a>
-    <a href="#tab-2">tab2</a>
-    <a href="#tab-3">tab3</a>
+  <div class=":uno__tabs: ">
+    <div class=":uno: flex justify-between">
+      <a href="#tab-1">tab1</a>
+      <a href="#tab-2">tab2</a>
+      <a href="#tab-3">tab3</a>
+    </div>
+    <div class="">
+      <div id="tab-1"></div>
+      <div id="tab-2"></div>
+      <div id="tab-3"></div>
+    </div>
   </div>
-  <div id="tab-1"></div>
-  <div id="tab-2"></div>
-  <div id="tab-3"></div>
 </template>
 
 <script setup>
@@ -36,7 +39,7 @@ const dataValidator = async () => {
     clg.logger({
       name: "zod issues",
       value: error.issues,
-      path: "Card.vue"
+      path: "Card.vue",
     });
   }
 };
@@ -48,6 +51,4 @@ watch(props, () => {
 });
 </script>
 
-<style lang="less">
-
-</style>
+<style lang="less"></style>

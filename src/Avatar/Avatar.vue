@@ -11,8 +11,7 @@ const clg = new CLG({ isDevelopMode: true });
 const PropsSchema = z.object({
   img: z.string(),
   size: z.string()
-});
-const props = defineProps({
+});const props = defineProps({
   img: "",
   size: ""
 });
@@ -38,7 +37,7 @@ const dataValidator = async () => {
       value: error.issues,
       path: "Avatar.vue",
       line: "35",
-      commit: "comment",
+      commit: "UAvatar props is failed",
       deactivate: false,
     });
   }
