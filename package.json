@@ -1,6 +1,6 @@
 {
   "name": "unostrap",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "front-end UI framework width UNOCSS",
   "main": "index.js",
   "repository": {

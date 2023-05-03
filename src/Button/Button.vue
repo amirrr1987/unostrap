@@ -40,7 +40,7 @@ const dataValidator = async () => {
       value: error.issues,
       path: "Button.vue",
       line: "35",
-      commit: "comment",
+      commit: "UButton validate failed",
       deactivate: false,
     });
   }
