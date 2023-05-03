@@ -1,7 +1,6 @@
 <template>
   <button
-    :class="classComputed"
-    class=":uno: bg-blue-500 hover:bg-blue-800 focus:bg-blue-600 text-blue-50 rounded"
+    :class="`:uno: bg-blue-500 hover:bg-blue-800 focus:bg-blue-600 text-blue-50 rounded ${classComputed}`"
   >
     <slot></slot>
   </button>
