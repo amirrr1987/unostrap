@@ -2,6 +2,9 @@
   <button
     :class="`:uno: bg-blue-500 hover:bg-blue-800 focus:bg-blue-600 text-blue-50 rounded ${classComputed}`"
   >
+  <slot name="icon">
+
+  </slot>
     <slot></slot>
   </button>
 </template>
@@ -10,6 +13,7 @@
 import { defineProps, onMounted, watch, computed } from "vue";
 import { z } from "zod";
 import CLG from "console-log-advanced";
+import { Icon } from '@iconify/vue';
 const clg = new CLG({ isDevelopMode: true });
 
 const PropsSchema = z.object({

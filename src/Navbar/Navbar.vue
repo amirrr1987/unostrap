@@ -9,10 +9,12 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted, watch } from "vue";
+import { defineProps, onMounted, watch, defineComponent } from "vue";
 import { z } from "zod";
 import CLG from "console-log-advanced";
 const clg = new CLG({isDevelopMode: true})
+
+
 
 const PropsSchema = z.object({
   img: z.string(),
